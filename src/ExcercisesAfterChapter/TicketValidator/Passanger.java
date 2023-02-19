@@ -7,7 +7,7 @@ public class Passanger {
 
     private String firstName;
     private String lastName;
-    Ticket ticket;
+    private Ticket ticket;
 
     public Passanger(String firstName, String lastName) {
         this.firstName = firstName;

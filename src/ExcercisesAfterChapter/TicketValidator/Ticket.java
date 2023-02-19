@@ -19,16 +19,9 @@ public class Ticket {
         return validationTime;
     }
 
-    public void setValidationTime(LocalDateTime validationTime) {
-        this.validationTime = LocalDateTime.from(validationTime);
-    }
 
     public long getMinutesDurationTime() {
         return minutesDurationTime;
-    }
-
-    public void setMinutesDurationTime(long minutesDurationTime) {
-        this.minutesDurationTime = minutesDurationTime;
     }
 
     @Override

@@ -9,7 +9,7 @@ public class TicketMachine {
 
 
 
-    public void buyTicket(Passanger passanger, long minutesDurationTime) {
+    public static void buyTicket(Passanger passanger, long minutesDurationTime) {
         Ticket ticket = new Ticket(LocalDateTime.now(),minutesDurationTime);
         passanger.setTicket(ticket);
     }

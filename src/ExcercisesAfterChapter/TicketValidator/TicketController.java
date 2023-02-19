@@ -9,8 +9,6 @@ import java.time.LocalDateTime;
 public class TicketController {
     public static void main(String[] args) {
 
-        TicketMachine ticketMachine = new TicketMachine();
-
         Passanger passanger1 = new Passanger("Jan", "Kowalski");
         Passanger passanger2 = new Passanger("Ola", "Brzozowaka");
         Passanger passanger3 = new Passanger("Mike", "Tyson");
@@ -22,13 +20,13 @@ public class TicketController {
         Passanger passanger9 = new Passanger("Jarek", "Kubicki");
         Passanger passanger10 = new Passanger("Johnny", "Bean");
 
-        ticketMachine.buyTicket(passanger2, 30);
-        ticketMachine.buyTicket(passanger3, 10);
-        ticketMachine.buyTicket(passanger4, 120);
-        ticketMachine.buyTicket(passanger5, 5);
-        ticketMachine.buyTicket(passanger6, 10);
-        ticketMachine.buyTicket(passanger8, 90);
-        ticketMachine.buyTicket(passanger9, 30);
+        TicketMachine.buyTicket(passanger2, 30);
+        TicketMachine.buyTicket(passanger3, 10);
+        TicketMachine.buyTicket(passanger4, 120);
+        TicketMachine.buyTicket(passanger5, 5);
+        TicketMachine.buyTicket(passanger6, 10);
+        TicketMachine.buyTicket(passanger8, 90);
+        TicketMachine.buyTicket(passanger9, 30);
 
 
         Passanger[] passangersWithTicket = {passanger2, passanger3, passanger4, passanger5, passanger6, passanger8, passanger9};
@@ -58,12 +56,11 @@ public class TicketController {
     }
 
 
-
     private static Passanger[] createListOfPassengersWithInvalidTicket(Passanger[] passangersList) {
 
         Passanger[] passangersInvalifTicket = calculatePassangerArrayLength(passangersList);
 
-        for (int i = 0; i <passangersList.length; i++) {
+        for (int i = 0; i < passangersInvalifTicket.length; i++) {
             if (checkIfTicketIsValid(passangersList[i])) {
                 passangersInvalifTicket[i] = passangersList[i];
             }
